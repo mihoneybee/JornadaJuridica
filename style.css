@@ -940,7 +940,7 @@ section {
 .cotas-patrocinio {
   background: var(--green-dark);
   border-radius: 8px;
-  padding: 3rem;
+  padding: 2rem;
   color: var(--white);
 }
 
