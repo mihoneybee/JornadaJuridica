@@ -461,6 +461,15 @@ section {
   position: relative;
 }
 
+.about-img-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
 .about-img-inner {
   position: absolute;
   inset: 0;
@@ -472,6 +481,7 @@ section {
   display: flex;
   align-items: flex-end;
   padding: 2rem;
+  z-index: 1;
 }
 
 .forest-bg-svg {
@@ -480,6 +490,7 @@ section {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  z-index: 1;
 }
 
 .about-stat-overlay {
