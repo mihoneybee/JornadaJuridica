@@ -28,6 +28,8 @@ setInterval(updateCountdown, 1000);
 
 // Nav scroll effect
 const nav = document.querySelector('nav');
+const navToggle = document.querySelector('.nav-hamburger');
+
 window.addEventListener('scroll', () => {
   if (window.scrollY > 60) {
     nav.style.padding = '0.75rem 2.5rem';
@@ -35,6 +37,20 @@ window.addEventListener('scroll', () => {
     nav.style.padding = '1rem 2.5rem';
   }
 });
+
+if (navToggle) {
+  navToggle.addEventListener('click', () => {
+    nav.classList.toggle('nav-open');
+    navToggle.classList.toggle('active');
+  });
+
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('nav-open');
+      navToggle.classList.remove('active');
+    });
+  });
+}
 
 // Intersection Observer for scroll animations
 const observer = new IntersectionObserver((entries) => {
