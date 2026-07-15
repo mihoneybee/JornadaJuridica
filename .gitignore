@@ -1,0 +1,14 @@
+# Windows thumbnail cache
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+*.lnk
