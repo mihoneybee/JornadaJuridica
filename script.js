@@ -21,6 +21,14 @@ function updateCountdown() {
   document.getElementById('cd-hours').textContent = String(hours).padStart(2, '0');
   document.getElementById('cd-mins').textContent = String(mins).padStart(2, '0');
   document.getElementById('cd-secs').textContent = String(secs).padStart(2, '0');
+
+  const srEl = document.getElementById('countdown-sr-message');
+  if (srEl) {
+    const srText = `Contagem regressiva: Faltam ${days} dias, ${hours} horas e ${mins} minutos para o início do evento.`;
+    if (srEl.textContent !== srText) {
+      srEl.textContent = srText;
+    }
+  }
 }
 
 updateCountdown();
@@ -30,13 +38,29 @@ setInterval(updateCountdown, 1000);
 const nav = document.querySelector('nav');
 const navToggle = document.querySelector('.nav-hamburger');
 
+const backToTopButton = document.getElementById('back-to-top');
+
 window.addEventListener('scroll', () => {
   if (window.scrollY > 60) {
     nav.style.padding = '0.75rem 2.5rem';
   } else {
     nav.style.padding = '1rem 2.5rem';
   }
+
+  if (backToTopButton) {
+    if (window.scrollY > 300) {
+      backToTopButton.classList.add('is-visible');
+    } else {
+      backToTopButton.classList.remove('is-visible');
+    }
+  }
 });
+
+if (backToTopButton) {
+  backToTopButton.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
 
 if (navToggle) {
   navToggle.addEventListener('click', () => {
@@ -68,3 +92,34 @@ document.querySelectorAll('.artigo-card, .painel-item, .pat-benefit, .cota-pat-c
   el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
   observer.observe(el);
 });
+
+// PIX Clipboard Copy Utility
+function bindCopyButtons() {
+  document.querySelectorAll('.copy-key-btn').forEach(button => {
+    button.addEventListener('click', async () => {
+      const key = button.getAttribute('data-key');
+      const feedback = button.parentElement.querySelector('.copy-feedback');
+      try {
+        await navigator.clipboard.writeText(key);
+        button.classList.add('copied');
+        if (feedback) {
+          feedback.textContent = 'Copiado!';
+          feedback.classList.add('is-visible');
+        }
+        setTimeout(() => {
+          button.classList.remove('copied');
+          if (feedback) {
+            feedback.textContent = '';
+            feedback.classList.remove('is-visible');
+          }
+        }, 1800);
+      } catch (error) {
+        if (feedback) {
+          feedback.textContent = 'Erro ao copiar';
+          feedback.classList.add('is-visible');
+        }
+      }
+    });
+  });
+}
+bindCopyButtons();

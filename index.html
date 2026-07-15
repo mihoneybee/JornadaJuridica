@@ -36,7 +36,7 @@
 
   <!-- ══ NAV ══ -->
   <nav>
-    <a href="#" class="nav-logo">
+    <a href="#hero" class="nav-logo">
       <img src="Identidade visual/logo1.png" alt="OAB Subseção Marabá" class="nav-logo-img">
     </a>
     <ul class="nav-links">
@@ -101,7 +101,7 @@
       <div class="hero-right">
         <div class="countdown-card">
           <p class="countdown-label"><span class="live-dot"></span> &nbsp;Contagem regressiva</p>
-          <div class="countdown-grid">
+          <div class="countdown-grid" aria-hidden="true">
             <div class="countdown-unit">
               <span class="countdown-num" id="cd-days">—</span>
               <span class="countdown-unit-label">Dias</span>
@@ -119,6 +119,7 @@
               <span class="countdown-unit-label">Seg</span>
             </div>
           </div>
+          <div id="countdown-sr-message" class="sr-only" aria-live="polite">Carregando contagem regressiva...</div>
         </div>
 
         <div class="theme-card">
@@ -229,22 +230,22 @@
           <div class="paineis-list">
             <div class="painel-item">
               <div class="painel-info">
-                <span class="painel-info-tag tag-debate">Comentário</span>
-                <h4>abertura do Evento</h4>
-                <p>Mesa-Redonda: Empresas e Desenvolvimento Regional – Desafios Jurídicos para o Crescimento Econômico de Marabá e Região</p>
+                <span class="painel-info-tag tag-debate">Abertura do Evento</span>
+                <h4>Mesa-Redonda: Empresas e Desenvolvimento Regional – Desafios Jurídicos para o Crescimento Econômico de Marabá e Região</h4>
+                <p>Análise dos desafios jurídicos que impactam o ambiente de negócios, o desenvolvimento econômico e social, e a busca por novas oportunidades de investimento na região, considerando a legislação ambiental, tributária e urbanística.</p>
               </div>
             </div>
  
             <div class="painel-item">
               <div class="painel-info">
-                <span class="painel-info-tag tag-palestra">Palestra</span>
+                <span class="painel-info-tag tag-climatico">Painel</span>
                 <h4>Cidadania Fiscal, Transformação Digital e Acesso a Direitos na Amazônia</h4>
-                <p>Tributação, desenvolvimento econômico, cidadania fiscal e combate à informalidade na perspectiva da Receita.</p>
+                <p>Tributação, desenvolvimento econômico, cidadania fiscal e combate à informalidade na perspectiva da Receita Federal.</p>
                 <div class="painel-speaker has-image">
                   <img src="paineis/06-08/painel 1.jpeg" alt="Andreia Ribeiro" class="speaker-img" loading="lazy">
                   <div class="speaker-details">
                     <span class="speaker-name">Andreia Ribeiro — Palestrante</span>
-                    <span class="speaker-role">Eixo sugerido: Tributação, desenvolvimento econômico, cidadania fiscal e combate à informalidade</span>
+                    <span class="speaker-role">Auditora-Fiscal da Receita Federal, especialista em Direito Tributário, Direito Processual Tributário e Gestão de Processos Tributários, referência nacional em transformação digital e tributação na Amazônia.</span>
                   </div>
                 </div>
               </div>
@@ -252,14 +253,14 @@
  
             <div class="painel-item">
               <div class="painel-info">
-                <span class="painel-info-tag tag-painel">Painel</span>
+                <span class="painel-info-tag tag-climatico">Painel</span>
                 <h4>Controle Externo, Governança e Políticas Públicas na Amazônia</h4>
                 <p>O papel do TCE/PA no fortalecimento da gestão pública regional, com foco em transparência, governança e efetividade das políticas públicas.</p>
                 <div class="painel-speaker has-image">
                   <img src="paineis/06-08/painel 2.jpg" alt="Rafael Larêdo" class="speaker-img" loading="lazy">
                   <div class="speaker-details">
                     <span class="speaker-name">Rafael Larêdo — Palestrante</span>
-                    <span class="speaker-role">Auditor do TCEPA • Professor Doutor em Administração Pública • Especialista em Gestão e Direito Público • Ampla experiência em licitações e contratos</span>
+                    <span class="speaker-role">Auditor do TCEPA, professor Doutor em Administração Pública, especialista em Gestão e Direito Público, com ampla experiência em licitações e contratos</span>
                   </div>
                 </div>
               </div>
@@ -292,15 +293,15 @@
           <div class="paineis-list">
             <div class="painel-item">
               <div class="painel-info">
-                <span class="painel-info-tag tag-debate">Comentário</span>
+                <span class="painel-info-tag tag-debate">Abertura do Evento</span>
                 <h4>“20 anos de Lei Maria da Penha - Um debate necessário” Comissão da Mulher Advogada e convidados</h4>
-                <p>Debate com a Comissão da Mulher Advogada e convidados sobre a relevância da Lei Maria da Penha após 20 anos.</p>
+                <p>Mesa-redonda para debater os 20 anos da Lei Maria da Penha, com foco em sua relevância, avanços e desafios na proteção dos direitos das mulheres.</p>
               </div>
             </div>
  
             <div class="painel-item">
               <div class="painel-info">
-                <span class="painel-info-tag tag-climatico">Painel: Direito Climático</span>
+                <span class="painel-info-tag tag-climatico">Painel</span>
                 <h4>Atuação federal, litigância estratégica pública e prova climática em ações coletivas</h4>
                 <p>Mesa expositivo-dialogal sobre Direito Climático na Amazônia Oriental: litigância e crises climáticas no legado pós-COP30.</p>
                 <div class="painel-speaker has-image">
@@ -315,7 +316,7 @@
 
             <div class="painel-item">
               <div class="painel-info">
-                <span class="painel-info-tag tag-climatico">Painel: Direito Climático</span>
+                <span class="painel-info-tag tag-climatico">Painel</span>
                 <h4>Perspectiva do ente federado, Política Estadual de Mudanças Climáticas e REDD+ jurisdicional</h4>
                 <p>Mesa expositivo-dialogal sobre Direito Climático na Amazônia Oriental: litigância e crises climáticas no legado pós-COP30.</p>
                 <div class="painel-speaker has-image">
@@ -330,7 +331,7 @@
 
             <div class="painel-item">
               <div class="painel-info">
-                <span class="painel-info-tag tag-climatico">Painel: Direito Climático</span>
+                <span class="painel-info-tag tag-climatico">Painel</span>
                 <h4>Litigância climática pela sociedade civil, responsabilidade civil climática, ESG e defesa de atingidos</h4>
                 <p>Mesa expositivo-dialogal sobre Direito Climático na Amazônia Oriental: litigância e crises climáticas no legado pós-COP30.</p>
                 <div class="painel-speaker has-image">
@@ -352,7 +353,7 @@
                   <img src="paineis/07-08/mediadora.png" alt="Nicilene Cavalcante" class="speaker-img" loading="lazy">
                   <div class="speaker-details">
                     <span class="speaker-name">Nicilene Cavalcante — Mediadora (OAB Subseção Marabá)</span>
-                    <span class="speaker-role">Advogada Especialista em Direito Ambiental e Minerário pela Pontifícia Católica de Minas Gerais – PUC/MG. Atuação especializada em Direito ambiental desde o ano de 2006. Fundadora do Escritório Nicilene Cavalcante Advocacia e Consultoria Ambiental. Membro da Ubaa, Conselheira da OAB/Subseção Marabá/PA. Atual Presidente Comissão de Direito Ambiental da OAB/Subsecao de Marabá/PA.</span>
+                    <span class="speaker-role">Advogada Especialista em Direito Ambiental e Minerário pela Pontifícia Católica de Minas Gerais – PUC/MG. Atuação especializada em Direito ambiental desde o ano de 2006. Fundadora do Escritório Nicilene Cavalcante Advocacia e Consultoria Ambiental. Membro da Ubaa, Conselheira da OAB/Subseção Marabá/PA. Atual Presidente Comissão de Direito Ambiental da OAB/Subseção de Marabá/PA.</span>
                   </div>
                 </div>
               </div>
@@ -372,7 +373,7 @@
         A OAB Subseção Marabá convida estudantes, advogados e pesquisadores a submeterem artigos científicos inéditos para apresentação e publicação nos anais do evento. Contribua para o debate jurídico sobre os desafios de nossa região.
       </p>
       <!-- COLOQUE O LINK DO SEU EDITAL ABAIXO NO ATRIBUTO "href" -->
-      <a href="#" target="_blank" class="btn-outline-white">Acessar Edital Completo (PDF)</a>
+      <a href="trabalhoscientificos/EDITAL DE CHAMADA DE TRABALHOS CIENTÍFICOS- ATUALIZADO.pdf" target="_blank" class="btn-outline-white">Acessar Edital Completo (PDF)</a>
     </div>
   </section>
 
@@ -417,7 +418,13 @@
             <h4>Importante: Pagamento e Inscrições</h4>
             <p>A submissão de artigo não dispensa o autor ou coautor da realização da inscrição no evento. Somente serão avaliados os trabalhos cujos autores estejam regularmente inscritos.</p>
             <ul style="margin-top: 0.5rem; list-style: circle; padding-left: 1.25rem; font-size: 0.85rem; color: var(--text-mid);">
-              <li><strong>Chave PIX:</strong> (94) 99284 6407.</li>
+            <li>
+              <span class="pix-key-line">
+                <strong>Chave PIX:</strong> <span class="pix-key">(94) 99284-6407</span>
+                <button class="copy-key-btn" data-key="94992846407" aria-label="Copiar Chave PIX">Copiar Chave</button>
+                <span class="copy-feedback" aria-live="polite"></span>
+              </span>
+            </li>
               <li>É obrigatório o envio do comprovante no ato da inscrição.</li>
             </ul>
           </div>
@@ -480,7 +487,11 @@
             Abrir Formulário Google →
           </a>
           <p class="form-note" style="margin-top: 1.5rem; font-size: 0.75rem; color: var(--text-soft);">
-            Chave PIX do Evento: <strong>(94) 99284-6407</strong>
+            <span class="pix-key-line">
+              Chave PIX do Evento: <strong class="pix-key">(94) 99284-6407</strong>
+              <button class="copy-key-btn" data-key="94992846407" aria-label="Copiar Chave PIX">Copiar</button>
+              <span class="copy-feedback" aria-live="polite"></span>
+            </span>
           </p>
         </div>
       </div>
@@ -534,7 +545,7 @@
             <p class="cota-pat-name">🥉 Bronze</p>
             <div class="cota-pat-price">
               <span>Investimento</span>
-              A partir de R$ 500,00
+              A partir de R$ 1000,00
             </div>
             <ul class="cota-pat-features">
               <li>Divulgação da marca no site do evento</li>
@@ -548,7 +559,7 @@
             <p class="cota-pat-name">🥈 Prata</p>
             <div class="cota-pat-price">
               <span>Investimento</span>
-              A partir de R$ 1.000,00
+              A partir de R$ 2.000,00
             </div>
             <ul class="cota-pat-features">
               <li>Divulgação da marca no site do evento</li>
@@ -563,7 +574,7 @@
             <p class="cota-pat-name">🥇 Ouro</p>
             <div class="cota-pat-price">
               <span>Investimento</span>
-              A partir de R$ 2.000,00
+              A partir de R$ 3.000,00
             </div>
             <ul class="cota-pat-features">
               <li>Divulgação da marca no site do evento</li>
@@ -579,7 +590,7 @@
             <p class="cota-pat-name">💎 Master</p>
             <div class="cota-pat-price">
               <span>Investimento</span>
-              A partir de R$ 3.000,00
+              A partir de R$ 4.000,00
             </div>
             <ul class="cota-pat-features">
               <li>Divulgação da marca no site do evento</li>
@@ -648,6 +659,9 @@
       </div>
     </div>
   </footer>
+
+  <!-- Botão Voltar ao Topo -->
+  <button id="back-to-top" class="back-to-top" aria-label="Voltar ao topo">▲</button>
 
   <script src="script.js"></script>
 </body>

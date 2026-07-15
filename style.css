@@ -160,9 +160,9 @@ nav {
   inset: 0;
   background: linear-gradient(
     160deg,
-    rgba(26,74,46,0) 0%,
-    rgba(26,74,46,0.7) 40%,
-    rgba(26,74,46,0.95) 80%
+    rgba(10,30,20,0.6) 0%,
+    rgba(26,74,46,0.85) 40%,
+    rgba(10,30,18,0.95) 80%
   ),
   radial-gradient(ellipse at 70% 20%, rgba(45,122,79,0.4) 0%, transparent 60%);
   z-index: 1;
@@ -476,8 +476,8 @@ section {
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(45,122,79,0.3) 0%,
-    rgba(26,74,46,0.8) 100%
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(0, 0, 0, 0.75) 100%
   );
   display: flex;
   align-items: flex-end;
@@ -1580,4 +1580,96 @@ footer {
   #edital-destaque { padding: 3rem 1.5rem; }
   .edital-destaque-title { font-size: 1.8rem; }
   .btn-outline-white { width: 100%; }
+}
+
+/* ── ACCESSIBILITY UTILITY ── */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ── BACK TO TOP BUTTON ── */
+.back-to-top {
+  position: fixed;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
+  background: var(--teal);
+  color: var(--white);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  z-index: 1100;
+  transition: transform 0.2s ease, background-color 0.2s ease, opacity 0.2s ease;
+}
+.back-to-top:hover,
+.back-to-top:focus-visible {
+  transform: translateY(-2px);
+  background-color: var(--teal-light);
+  outline: none;
+}
+.back-to-top.is-visible {
+  display: flex;
+}
+
+/* ── PIX CONVERSION ERGONOMICS ── */
+.pix-key-line {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.pix-key {
+  font-family: inherit;
+  font-weight: 700;
+  color: inherit;
+}
+.copy-key-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  border: 1px solid rgba(26, 74, 46, 0.15);
+  background: var(--white);
+  color: var(--green-dark);
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.copy-key-btn:hover,
+.copy-key-btn:focus-visible {
+  border-color: var(--teal);
+  color: var(--teal);
+  outline: none;
+}
+.copy-key-btn.copied {
+  background: var(--teal);
+  color: var(--white);
+  border-color: var(--teal);
+}
+.copy-feedback {
+  font-size: 0.72rem;
+  color: var(--teal);
+  font-weight: 600;
+  min-height: 1rem;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+.copy-feedback.is-visible {
+  opacity: 1;
 }
