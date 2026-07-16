@@ -1138,12 +1138,12 @@ section {
   background: var(--white);
   border: 1px solid var(--sand);
   border-radius: 8px;
-  padding: 1rem 1.5rem;
+  padding: 0rem 0.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 170px;
-  height: 90px;
+  height: 173px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
   transition: all 0.3s ease;
 }
