@@ -1570,7 +1570,14 @@ footer {
   .hero-actions { flex-direction: column; width: 100%; gap: 0.8rem; }
   .btn-primary, .btn-outline { width: 100%; justify-content: center; }
   
-  .about-stat-overlay { grid-template-columns: 1fr; gap: 0.5rem; }
+  /* Tornar os mini-cards em 2x2 no mobile (apenas responsividade) */
+  .about-stat-overlay { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.5rem; }
+  .about-stat {
+    aspect-ratio: 1 / 1;
+    padding: 0.6rem;
+    border-radius: 12px;
+  }
+  .about-img-inner { padding: 1rem; }
   .cotas-grid { grid-template-columns: 1fr; }
   
   .form-card { padding: 1.5rem; }
