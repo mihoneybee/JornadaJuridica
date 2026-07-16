@@ -1499,8 +1499,7 @@ footer {
   .hero-title { font-size: 3.5rem; }
   
   .about-grid, .inscricoes-layout, .patrocinio-intro { grid-template-columns: 1fr; gap: 3rem; }
-  .about-img-frame { aspect-ratio: 16/9; }
-  
+  .about-img-frame { aspect-ratio: 4/6; }
   .edital-grid { grid-template-columns: 1fr; gap: 2rem; }
   .footer-top { grid-template-columns: 1fr 1fr; }
 }
