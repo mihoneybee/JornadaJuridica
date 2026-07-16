@@ -1099,6 +1099,75 @@ section {
   font-weight: 500;
 }
 
+/* Sponsors Showcase */
+.sponsors-showcase {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.sponsors-showcase-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  color: var(--green-dark);
+  margin-bottom: 2.5rem;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.sponsors-showcase-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 25%;
+  width: 50%;
+  height: 2px;
+  background: var(--teal);
+}
+
+.sponsors-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.sponsor-logo-item {
+  background: var(--white);
+  border: 1px solid var(--sand);
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 90px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+  transition: all 0.3s ease;
+}
+
+.sponsor-logo-item img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.85;
+  transition: all 0.3s ease;
+}
+
+.sponsor-logo-item:hover {
+  transform: translateY(-5px);
+  border-color: var(--teal);
+  box-shadow: 0 10px 25px rgba(26, 181, 160, 0.15);
+}
+
+.sponsor-logo-item:hover img {
+  filter: none;
+  opacity: 1;
+}
+
 /* ── FOOTER ── */
 footer {
   background: #0f2a1a;
@@ -1112,39 +1181,13 @@ footer {
 
 .footer-top {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  grid-template-columns: 2fr 1fr 1fr;
   gap: 3rem;
   padding-bottom: 2rem;
   border-bottom: 1px solid rgba(255,255,255,0.08);
   margin-bottom: 2rem;
 }
 
-.footer-sponsors {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(65px, 1fr));
-  gap: 0.6rem;
-  align-items: center;
-  margin-top: 0.75rem;
-}
-
-.footer-sponsors img {
-  width: 100%;
-  height: auto;
-  max-height: 40px;
-  object-fit: contain;
-  filter: grayscale(100%) brightness(1.2) contrast(0.8) opacity(0.75);
-  transition: all 0.3s ease;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 4px;
-  padding: 6px;
-}
-
-.footer-sponsors img:hover {
-  filter: none;
-  opacity: 1;
-  background: rgba(255, 255, 255, 0.12);
-  transform: translateY(-2px);
-}
 
 
 .footer-brand p {
