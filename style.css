@@ -1112,12 +1112,40 @@ footer {
 
 .footer-top {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
   gap: 3rem;
   padding-bottom: 2rem;
   border-bottom: 1px solid rgba(255,255,255,0.08);
   margin-bottom: 2rem;
 }
+
+.footer-sponsors {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(65px, 1fr));
+  gap: 0.6rem;
+  align-items: center;
+  margin-top: 0.75rem;
+}
+
+.footer-sponsors img {
+  width: 100%;
+  height: auto;
+  max-height: 40px;
+  object-fit: contain;
+  filter: grayscale(100%) brightness(1.2) contrast(0.8) opacity(0.75);
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+  padding: 6px;
+}
+
+.footer-sponsors img:hover {
+  filter: none;
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-2px);
+}
+
 
 .footer-brand p {
   font-size: 0.82rem;
